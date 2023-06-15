@@ -1,0 +1,6 @@
+com\wenabi\interview\domain\Wish.class
+com\wenabi\interview\controller\WishController.class
+com\wenabi\interview\InterviewApplication.class
+com\wenabi\interview\domain\Initiative.class
+com\wenabi\interview\domain\Company.class
+com\wenabi\interview\domain\Profile.class
