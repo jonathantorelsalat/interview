@@ -1,0 +1,40 @@
+<div class="wish-detail-card">
+    <div class="volontaire-detail">
+        <div class ="volontaire-detail-inscription">
+            <div class ="volontaire-detail-inscription-picture volontaire-detail-inscription-item">
+                pict
+            </div>
+            <div class ="volontaire-detail-inscription-id volontaire-detail-inscription-item">
+                {{ wishConsultData.volontaireId }}
+            </div>
+           <div class ="volontaire-detail-inscription-date volontaire-detail-inscription-item">
+            Inscrit le: {{ wishConsultData.dateInscription | date:'mediumDate' | customInterviewDate }}
+        </div>
+         </div>
+        <div class ="volontaire-detail-personnal">
+            <div class ="volontaire-detail-personnal-name volontaire-detail-personnal-item">
+                {{ wishConsultData.prenom }} {{ wishConsultData.nom }}
+            </div>
+            <div class ="volontaire-detail-personnal-company volontaire-detail-personnal-item">
+                {{ wishConsultData.nomCompany }}
+            </div>
+            <div class ="volontaire-detail-personnal-mission volontaire-detail-personnal-item">
+                {{ wishConsultData.nomMission }}
+            </div>
+            <div class ="volontaire-detail-personnal-localisation volontaire-detail-personnal-item">
+                {{ wishConsultData.localisationMission }}
+            </div>
+            <div class ="volontaire-detail-personnal-coordinateur volontaire-detail-personnal-item">
+                {{ wishConsultData.prenomCoordinateur }} {{ wishConsultData.nomCoordinateur }} - {{ wishConsultData.nomPoste }}
+            </div>
+        </div>
+    </div> 
+    <div class="status-detail-status">
+        <app-button-circle 
+        [libelle]="getLibelleStatus(wishConsultData.wishStatus)"
+        [circleColor]="getCircleColor(wishConsultData.wishStatus)"
+        [readonly]="'true'"
+        ></app-button-circle>
+        <div class ="volontaire-detail-status-description">{{ getStatusDescription(wishConsultData.wishStatus)}}</div>
+    </div>
+</div>

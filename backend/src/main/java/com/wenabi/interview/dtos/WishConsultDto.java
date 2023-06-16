@@ -15,9 +15,11 @@ import lombok.Setter;
 @AllArgsConstructor
 public class WishConsultDto {
 	private Date dateInscription;
+	private Long volontaireId;
 	private String prenom;
 	private String nom;
-	private String nomMission;
+	private String nomMission;	
+	private String nomCompany;
 	private String localisationMission;
 	private String wishStatus;
 	private String prenomCoordinateur;

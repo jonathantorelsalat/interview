@@ -1,3 +1,47 @@
 <div class="list-container">
-  Implement volunteers list and statisics here 🔥🙏!
+  <div class="list-container-info">En ce moment</div>
+  <div class="summary-container">
+    <span class="summary-container-number">{{totalElement}}</span>
+    <span class="summary-container-texte"> inscriptions</span>
+  </div>
+  <div class="summary-bar">
+    <div [ngStyle]="{'min-width': getSizeBar('APPLICATION') + '%'}" 
+    class="summary-bar-status-application summary-bar-section"></div>
+    <div [ngStyle]="{'min-width': getSizeBar('DISCUSSION') + '%'}"
+    class="summary-bar-status-discussion summary-bar-section"></div>
+    <div [ngStyle]="{'min-width': getSizeBar('WAITING_ASSOCIATION_VALIDATION') + '%'}"
+    class="summary-bar-status-association-validation summary-bar-section"></div>
+    <div [ngStyle]="{'min-width': getSizeBar('WAITING_MANAGER_VALIDATION') + '%'}"
+    class="summary-bar-status-manager-validation summary-bar-section"></div>
+    <div [ngStyle]="{'min-width': getSizeBar('IN_PROGRESS') + '%'}"
+    class="summary-bar-status-progress summary-bar-section"></div>
+    <div [ngStyle]="{'min-width': getSizeBar('USER_HAS_PARTICIPATED') + '%'}"
+    class="summary-bar-status-participated summary-bar-section"></div>
+    <div [ngStyle]="{'min-width': getSizeBar('CANCELLED') + '%'}"
+    class="summary-bar-status-canceled summary-bar-section"></div>
+  </div>
+  <div>Suivez les inscriptions en fonction de leurs statuts</div>
+  <div class="list-button-filter">
+    <div class ="test" *ngFor="let enum of statusNameEnum | keyvalue: 0">
+      <app-button-circle 
+      (click)="buttonClicked(enum.key)"
+      [libelle]="enum.value"
+      [circleColor]="getCircleColor(enum.key)"
+      ></app-button-circle>
+    </div>
+  </div>
+  <div>{{wishesDataNumberResults}} inscriptions correspondent à votre recherche</div>
+  <ng-container class="card-wish-details-container" *ngIf="wishesDataNumberResults > 0; else checkInput">
+    <div *ngFor="let wishDetail of wishesData">
+      <app-wish-detail-card
+      [wishConsultData]="wishDetail">
+    </app-wish-detail-card>
+    </div>
+  </ng-container>
+  <ng-template #checkInput>
+    <ng-container *ngIf="inputStatusListEmpty(); else noResults">
+      Veuillez choisir un statut d'inscription
+    </ng-container>
+  </ng-template>
+  <ng-template #noResults>Aucun volontaires  n'en sont à ce stade d'inscription</ng-template>
 </div>

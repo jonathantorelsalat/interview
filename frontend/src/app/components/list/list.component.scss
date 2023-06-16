@@ -4,12 +4,36 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Poppins';
     width: 100%;
+    max-width: 1056px;
     height: fit-content;
+    font-style: normal;
     margin: 64px 0 40px 0;
     padding: 24px 16px;
     background-color: $white;
     border-radius: 25px;
+    row-gap: 24px;
+
+    .list-container-info{
+        font-weight: 700;
+        font-size: 14px;
+        height: 24px;
+    }
+
+    .summary-container {
+        .summary-container-number {
+            min-height: 36px;
+            font-weight: 600;
+            font-size: 45px;
+            margin-right: 8px;
+        }
+        .summary-container-texte{
+            font-weight: 400;
+            font-size: 14px;
+            min-height: 24px;
+        }
+    }
 
     .stat-container {
         h2 {
@@ -22,8 +46,8 @@
 
     button {
         margin: auto;
-        width: 200px;
-        height: 42px;
+        width: auto;
+        height: 24px;
         background-color: $light-grey;
         border: none;
         border-radius: 25px;
@@ -34,5 +58,41 @@
             cursor: pointer;
             box-shadow: 0px 2px 10px rgb(0 0 0 / 35%);
         }
+    }
+
+    .summary-bar{
+        display: flex;
+        width: 75%;
+        border-radius: 25px;
+        .summary-bar-section{
+            height: 16px
+        }
+        .summary-bar-status-application{
+            background-color:#FF7F7F;
+        }
+        .summary-bar-status-discussion{
+            background-color:#FF0000;
+        }
+        .summary-bar-status-association-validation{
+            background-color:#FEC000;
+        }
+        .summary-bar-status-manager-validation{
+            background-color:#FFE38C;
+        }
+        .summary-bar-status-progress{
+            background-color:#91CF50;
+        }
+        .summary-bar-status-participated{
+            background-color:#BBDB9F;
+        }
+        .summary-bar-status-canceled{
+            background-color:#262626;
+        }
+    }
+
+    .list-button-filter{
+        display:flex;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }

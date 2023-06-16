@@ -34,10 +34,12 @@ public class WishMapper {
 				.nom(wishDetail.getNomVolontaire())//
 				.nomCoordinateur(wishDetail.getNomCoordinateurMission())//
 				.nomMission(wishDetail.getNomInitiative())//
-				.nomPoste("nomPosteCordinnateur")//
+				.nomCompany(wishDetail.getNomCompanyVolontaire())//
+				.nomPoste("nomPosteCoordinateur")//
 				.prenom(wishDetail.getPrenomVolontaire())//
 				.prenomCoordinateur(wishDetail.getPrenomCoordinateurMission())//
 				.wishStatus(wishDetail.getWishStatus())//
+				.volontaireId(wishDetail.getVolontaireId())//
 				.build();
 	}
 }
