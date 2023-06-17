@@ -9,7 +9,7 @@ registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
-    AppComponent    
+    AppComponent
   ],
   imports: [
     BrowserModule,

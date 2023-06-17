@@ -23,11 +23,21 @@ public class WishController {
 	@Autowired
 	WishServiceApi wishServiceApi;
 	
+    /**
+     * Compte le nombre total de wish par status
+     * @return WishStatusDto
+     */
     @GetMapping("/count/status")
     public WishStatusDto countWishByStatus() {
         return wishServiceApi.countWishByStatus();
     }    
     
+    /**
+     * Accepte une liste de statuts de wish et pour cette liste renvoit 
+     * toutes les informations pour le display des donnees front
+     * @param statusList
+     * @return List<WishConsultDto>
+     */
     @GetMapping("/status")
     public List<WishConsultDto> getAllWishConsultByStatus(@RequestParam(value = "status", required = false) List<String> statusList) {
     	return wishServiceApi.getAllWishConsultByStatus(statusList);

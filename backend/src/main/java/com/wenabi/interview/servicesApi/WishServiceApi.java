@@ -18,10 +18,20 @@ public class WishServiceApi {
 	@Autowired
 	WishService wishService;
 
+    /**
+     * Compte le nombre total de wish par status
+     * @return WishStatusDto
+     */
 	public WishStatusDto countWishByStatus() {		
 		return WishMapper.mapCountStatusToCountStatusDto(this.wishService.countWishByStatus());
 	}
 
+    /**
+     * Accepte une liste de statuts de wish et pour cette liste renvoit 
+     * toutes les informations pour le display des donnees front
+     * @param statusList
+     * @return List<WishConsultDto>
+     */
 	public List<WishConsultDto> getAllWishConsultByStatus(List<String> statusList) {
 		List<WishDetail> listWish = this.wishService.getAllWishConsultByStatus(statusList);
 		return listWish.stream().map(WishMapper::mapDetailToDetailDto).collect(Collectors.toList());

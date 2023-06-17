@@ -1,9 +1,12 @@
+@import './../../../../app/theme/palette.component.scss';
+
+
 .wish-detail-card{
     display: flex;
     flex-direction: row;
     padding: 32px;
     gap: 16px;
-    box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.08), 0px 8px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: $box-shadow-default;
     border-radius: 8px;
     .volontaire-detail{
         display: flex;
@@ -32,7 +35,7 @@
                 height: 36px;
                 font-size: 0.7rem;
                 min-height: 18px;
-                color: #757575;
+                color: $text-light-grey;
                 padding: 0.5rem;
             }
         }
@@ -48,19 +51,20 @@
             }
             .volontaire-detail-personnal-company{
                 font-weight: 400;
-                color: #757575;
+                color: $text-light-grey;
             }
             .volontaire-detail-personnal-mission{
                 font-weight: 400;
             }
             .volontaire-detail-personnal-mission-texte{            
-                color: #007DFF
+                color: $text-blue
             }
             .volontaire-detail-personnal-localisation{
                 font-weight: 400;
             }
             .volontaire-detail-personnal-localisation-icon{
-                height: 16px;
+                max-height: 16px;
+                margin-top: 2px;
             }            
             .volontaire-detail-personnal-coordinateur{
                 font-weight: 400;

@@ -12,11 +12,22 @@ import com.wenabi.interview.customEntity.WishStatus;
 import com.wenabi.interview.domain.Wish;
 
 public interface WishDao extends JpaRepository<Wish, Integer> {
+	
+	/**
+	 * Appel au back afin de compter le nombre de wish par statut
+	 * @return List <WishStatus>
+	 */
 	@Query(value = "SELECT status as status, COUNT(*) as count"
 			+ " FROM Wish"
 			+ " GROUP BY status", nativeQuery = true)
-	List<WishStatus> countWishByStatus();
+	List<WishStatus> countWishByStatus();	
 	
+	/**
+	 * Appel au back afin de recuperer 
+	 * les informations des wishes possedant un des statuts passe en parametre
+	 * @param List <String> statusList
+	 * @return List <WishDetail>
+	 */
 	@Query(value = "SELECT wis.status as wishStatus, com.name as nomCompanyVolontaire, pro.id as volontaireId,"
 			+ " pro.created_date as dateInscription, pro.first_name as prenomVolontaire, pro.last_name as nomVolontaire,"
 			+ " ini.title as nomInitiative, ini.street_name as streetName, ini.city as city, ini.postal_code as postalCode, ini.country as country,"

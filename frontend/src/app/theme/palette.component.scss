@@ -1,0 +1,25 @@
+//theme wishes color
+//mettre à jour enum ColorStatusName si update
+$application-wish-color: #FF7F7F;
+$discussion-wish-color: #FF0000;
+$association-validation-wish-color: #FEC000;
+$manager-validation-wish-color: #FFE38C;
+$progress-wish-color: #91CF50;
+$participated-wish-color: #BBDB9F;
+$canceled-wish-color: #E0E0E0;
+
+//text
+$text-light-grey:#757575;
+$text-blue: #007DFF;
+
+//button
+$button-border-color: 1px solid rgba(19, 19, 19, 0.16);
+$button-is-selected: #D8D8D8;
+
+//others
+$default-white:#FFFFFF;
+$box-shadow-default: 2px 4px 24px rgba(0, 0, 0, 0.08), 0px 8px 16px rgba(0, 0, 0, 0.06);
+
+//linear gradient bonus
+$bonus-linear-gradient: linear-gradient(#FFD400, #FFD40080);
+
