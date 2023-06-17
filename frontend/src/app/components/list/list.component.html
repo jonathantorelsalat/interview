@@ -22,7 +22,7 @@
   </div>
   <div>Suivez les inscriptions en fonction de leurs statuts</div>
   <div class="list-button-filter">
-    <div class ="test" *ngFor="let enum of statusNameEnum | keyvalue: 0">
+    <div class ="list-button-filter-item" *ngFor="let enum of statusNameEnum | keyvalue: 0">
       <app-button-circle 
       (click)="buttonClicked(enum.key)"
       [libelle]="enum.value"
@@ -43,5 +43,5 @@
       Veuillez choisir un statut d'inscription
     </ng-container>
   </ng-template>
-  <ng-template #noResults>Aucun volontaires  n'en sont à ce stade d'inscription</ng-template>
+  <ng-template #noResults>Aucun volontaires ne sont à ce stade d'inscription</ng-template>
 </div>

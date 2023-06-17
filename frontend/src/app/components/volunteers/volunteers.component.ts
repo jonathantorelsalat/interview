@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHandPointRight} from '@fortawesome/free-regular-svg-icons';
+import { faHandPointRight} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-volunteers',

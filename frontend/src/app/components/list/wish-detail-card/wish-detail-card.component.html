@@ -1,8 +1,8 @@
 <div class="wish-detail-card">
     <div class="volontaire-detail">
         <div class ="volontaire-detail-inscription">
-            <div class ="volontaire-detail-inscription-picture volontaire-detail-inscription-item">
-                pict
+            <div class ="volontaire-detail-inscription-item">
+                <img class="volontaire-detail-inscription-picture" src="/assets/images/image3.png" alt="location dot image">
             </div>
             <div class ="volontaire-detail-inscription-id volontaire-detail-inscription-item">
                 {{ wishConsultData.volontaireId }}
@@ -18,19 +18,22 @@
             <div class ="volontaire-detail-personnal-company volontaire-detail-personnal-item">
                 {{ wishConsultData.nomCompany }}
             </div>
-            <div class ="volontaire-detail-personnal-mission volontaire-detail-personnal-item">
-                {{ wishConsultData.nomMission }}
+            <div class="volontaire-detail-personnal-item volontaire-detail-personnal-mission">
+                <fa-icon [icon]="solidHandIcon"></fa-icon>
+                <div class="volontaire-detail-personnal-mission-texte">{{ wishConsultData.nomMission }}</div>
             </div>
             <div class ="volontaire-detail-personnal-localisation volontaire-detail-personnal-item">
+                <img class="volontaire-detail-personnal-localisation-icon" src="/assets/images/locationDot.jpg" alt="location dot image">
                 {{ wishConsultData.localisationMission }}
             </div>
             <div class ="volontaire-detail-personnal-coordinateur volontaire-detail-personnal-item">
+                <fa-icon [icon]="solidUser"></fa-icon>
                 {{ wishConsultData.prenomCoordinateur }} {{ wishConsultData.nomCoordinateur }} - {{ wishConsultData.nomPoste }}
             </div>
         </div>
     </div> 
-    <div class="status-detail-status">
-        <app-button-circle 
+    <div class="volontaire-detail-status">        
+    <app-button-circle 
         [libelle]="getLibelleStatus(wishConsultData.wishStatus)"
         [circleColor]="getCircleColor(wishConsultData.wishStatus)"
         [readonly]="'true'"

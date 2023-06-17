@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { faHandPointRight, faUser } from '@fortawesome/free-solid-svg-icons';
 import { WishConsultDto } from 'src/app/objects/wishConsultDto';
 import { WishStatusService } from 'src/app/services/wish-status.service';
 
@@ -11,6 +12,9 @@ export class WishDetailCardComponent {
 
   @Input()
   wishConsultData: WishConsultDto;
+
+  private solidHandIcon = faHandPointRight;
+  private solidUser = faUser;
 
   constructor(private readonly wishStatusService: WishStatusService) { }
 

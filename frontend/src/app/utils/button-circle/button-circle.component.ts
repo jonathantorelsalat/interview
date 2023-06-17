@@ -27,8 +27,11 @@ export class ButtonCircleComponent implements OnInit {
   }
 
   getAriaLabel(): string {
-    return this.isSelected ? "Retirer "+this.libelle+" des champs de recherche" :
-      "Ajouter "+this.libelle+ " aux champs de recherche";
+    if (this.readonly==true) {
+       return "Le statut de l'inscription est actuellement '"+this.libelle+"'";
+    }
+    return this.isSelected ? "Retirer le statut '"+this.libelle+"' des champs de recherche" :
+      "Ajouter le statut '"+this.libelle+ "' aux champs de recherche";
   }
 
   updateSelection(): void{
