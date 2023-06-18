@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { UtilsModule } from '../utils/utils.module';
 import { WishDetailCardComponent } from './list/wish-detail-card/wish-detail-card.component';
 import { PipeModule } from '../pipe/pipe.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 const VOLUNTEERS_ROUTES: Routes = [
   { path: '', redirectTo: 'volunteers', pathMatch: 'full'},
@@ -25,7 +26,8 @@ const VOLUNTEERS_ROUTES: Routes = [
     RouterModule.forChild(VOLUNTEERS_ROUTES),
     FontAwesomeModule,
     UtilsModule,
-    PipeModule
+    PipeModule,
+    InfiniteScrollModule
   ]
 })
 export class ListVolunteersModule { }

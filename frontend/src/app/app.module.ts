@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -14,7 +15,8 @@ registerLocaleData(localeFr);
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InfiniteScrollModule
   ],
   bootstrap: [AppComponent],
   providers: [ { provide: LOCALE_ID, useValue: "fr-FR" }]

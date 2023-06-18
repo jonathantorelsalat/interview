@@ -12,15 +12,17 @@ export class WishStatusService {
 
   constructor() { }
 
-
-  public getCircleColor(status: string): string {
+ // get la couleur du statut du wish depuis l'enum
+ public getStatusColor(status: string): string {
     return this.colorStatusEnum[status];
  }
 
+ // get le libelle du statut du wish depuis l'enum
  public getLibelleStatus(status: string): string{
   return Object.keys(this.statusNameEnum).includes(status) ? this.statusNameEnum[status] : status;
  }
 
+ // get le statut du statut du wish depuis l'enum
  public getStatusDescription(status: string): string{
   return Object.keys(this.statusDescriptionEnum).includes(status) ? this.statusDescriptionEnum[status] : status;
  }

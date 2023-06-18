@@ -1,9 +1,13 @@
 <div class="list-container">
+
+  <!-- Informations des wishes totaux -->
   <div class="list-container-info">En ce moment</div>
   <div class="summary-container">
     <div class="summary-container-number">{{totalElement}}</div>
     <div class="summary-container-texte"> inscriptions</div>
   </div>
+
+  <!-- Barre representant par couleur le % de répartition des statuts des wishes totaux -->
   <div class="summary-bar">
     <div [ngStyle]="{'min-width': getSizeBar('APPLICATION') + '%'}" 
     class="summary-bar-status-application summary-bar-section"></div>
@@ -20,6 +24,8 @@
     <div [ngStyle]="{'min-width': getSizeBar('CANCELLED') + '%'}"
     class="summary-bar-status-canceled summary-bar-section"></div>
   </div>
+
+  <!-- Boutons permettant de filtrer une recherche sur un ou plusieurs statuts  -->
   <div>Suivez les inscriptions en fonction de leurs statuts</div>
   <div class="list-button-filter">
     <div class ="list-button-filter-item" *ngFor="let enum of statusNameEnum | keyvalue: 0">
@@ -30,14 +36,28 @@
       ></app-button-circle>
     </div>
   </div>
+
+  <!-- Résultats scrollable  -->
   <div>{{wishesDataNumberResults}} inscriptions correspondent à votre recherche</div>
   <ng-container class="card-wish-details-container" *ngIf="wishesDataNumberResults > 0; else checkInput">
-    <div *ngFor="let wishDetail of wishesData">
+    <div
+      class="scroll-wishes-container"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="500"
+      (scrolled)="onScroll()"
+      [scrollWindow]="false"
+    >
+    <div class="data-card" *ngFor="let wish of wishesInScroll">
       <app-wish-detail-card
-      [wishConsultData]="wishDetail">
-    </app-wish-detail-card>
+        [wishConsultData]="wish">
+      </app-wish-detail-card>
     </div>
+    <div *ngIf="isLoading">Chargement...</div>
+  </div>
   </ng-container>
+
+  <!-- Gestion du message si pas de donnees a display  -->
   <ng-template #checkInput>
     <ng-container *ngIf="inputStatusListEmpty(); else noResults">
       Veuillez choisir un statut d'inscription

@@ -11,10 +11,10 @@ export class ButtonCircleComponent implements OnInit {
   libelle?: string = "libelle";
 
   @Input()
-  backgroundColor?: string = "FFE38C";
+  backgroundColor;
 
   @Input()
-  circleColor?: string = "#FF0000";
+  circleColor;
 
   @Input()
   readonly: boolean = false;
@@ -26,6 +26,7 @@ export class ButtonCircleComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Gestion du aria-label selon les conditions d'affichage
   getAriaLabel(): string {
     if (this.readonly==true) {
        return "Le statut de l'inscription est actuellement '"+this.libelle+"'";

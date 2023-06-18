@@ -74,6 +74,19 @@
         width: 80%;
         gap: 1rem;
     }
+    
+    .scroll-wishes-container {
+        height: 50rem;
+        gap: 24px;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .data-card {
+            min-width: 100%;
+        }
+    }    
 }
 
 @media only screen and (max-width: 400px) {
