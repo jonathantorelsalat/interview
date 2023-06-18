@@ -28,7 +28,7 @@
   <!-- Boutons permettant de filtrer une recherche sur un ou plusieurs statuts  -->
   <div>Suivez les inscriptions en fonction de leurs statuts</div>
   <div class="list-button-filter">
-    <div class ="list-button-filter-item" *ngFor="let enum of statusNameEnum | keyvalue: 0">
+    <div class ="list-button-filter-item" *ngFor="let enum of statusNameEnum | keyvalue : returnZero">
       <app-button-circle 
       (click)="buttonClicked(enum.key)"
       [libelle]="enum.value"

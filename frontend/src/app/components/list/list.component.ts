@@ -77,6 +77,11 @@ export class ListComponent implements OnInit {
      return this.wishStatusService.getStatusColor(status);
   }
 
+  // Retourne 0pour garder l'ordre originel avec le pipe keyValue
+  returnZero(): number {
+    return 0;
+  }
+
   // Gestion de la liste des statuts à rechercher en fonction des boutons selectionnés
   private buttonClicked(updateStatus: string): void {
     if (this.listStatusToload.includes(updateStatus)) {
