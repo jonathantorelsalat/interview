@@ -10,19 +10,33 @@
   <!-- Barre representant par couleur le % de répartition des statuts des wishes totaux -->
   <div class="summary-bar">
     <div [ngStyle]="{'min-width': getSizeBar('APPLICATION') + '%'}" 
-    class="summary-bar-status-application summary-bar-section"></div>
+    class="summary-bar-status-application summary-bar-section">
+    <span class="summary-bar-status-tooltip">{{getSizeBar('APPLICATION') | number: '1.0-0'}} %</span>
+    </div>
     <div [ngStyle]="{'min-width': getSizeBar('DISCUSSION') + '%'}"
-    class="summary-bar-status-discussion summary-bar-section"></div>
-    <div [ngStyle]="{'min-width': getSizeBar('WAITING_ASSOCIATION_VALIDATION') + '%'}"
-    class="summary-bar-status-association-validation summary-bar-section"></div>
-    <div [ngStyle]="{'min-width': getSizeBar('WAITING_MANAGER_VALIDATION') + '%'}"
-    class="summary-bar-status-manager-validation summary-bar-section"></div>
-    <div [ngStyle]="{'min-width': getSizeBar('IN_PROGRESS') + '%'}"
-    class="summary-bar-status-progress summary-bar-section"></div>
-    <div [ngStyle]="{'min-width': getSizeBar('USER_HAS_PARTICIPATED') + '%'}"
-    class="summary-bar-status-participated summary-bar-section"></div>
-    <div [ngStyle]="{'min-width': getSizeBar('CANCELLED') + '%'}"
-    class="summary-bar-status-canceled summary-bar-section"></div>
+    class="summary-bar-status-discussion summary-bar-section">
+    <span class="summary-bar-status-tooltip">{{getSizeBar('DISCUSSION') | number: '1.0-0'}} %</span>
+    </div>
+      <div [ngStyle]="{'min-width': getSizeBar('WAITING_ASSOCIATION_VALIDATION') + '%'}"
+      class="summary-bar-status-association-validation summary-bar-section">
+      <span class="summary-bar-status-tooltip">{{getSizeBar('WAITING_ASSOCIATION_VALIDATION') | number: '1.0-0'}} %</span>
+    </div>
+      <div [ngStyle]="{'min-width': getSizeBar('WAITING_MANAGER_VALIDATION') + '%'}"
+      class="summary-bar-status-manager-validation summary-bar-section">
+      <span class="summary-bar-status-tooltip">{{getSizeBar('WAITING_MANAGER_VALIDATION') | number: '1.0-0'}} %</span>
+    </div>
+      <div [ngStyle]="{'min-width': getSizeBar('IN_PROGRESS') + '%'}"
+      class="summary-bar-status-progress summary-bar-section">
+      <span class="summary-bar-status-tooltip">{{getSizeBar('IN_PROGRESS') | number: '1.0-0'}} %</span>
+    </div>
+      <div [ngStyle]="{'min-width': getSizeBar('USER_HAS_PARTICIPATED') + '%'}"
+      class="summary-bar-status-participated summary-bar-section">
+      <span class="summary-bar-status-tooltip">{{getSizeBar('USER_HAS_PARTICIPATED') | number: '1.0-0'}} %</span>
+    </div>
+      <div [ngStyle]="{'min-width': getSizeBar('CANCELLED') + '%'}"
+      class="summary-bar-status-canceled summary-bar-section">
+      <span class="summary-bar-status-tooltip">{{getSizeBar('CANCELLED') | number: '1.0-0'}} %</span>
+    </div>
   </div>
 
   <!-- Boutons permettant de filtrer une recherche sur un ou plusieurs statuts  -->

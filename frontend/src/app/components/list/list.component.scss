@@ -65,6 +65,20 @@
         .summary-bar-status-canceled{
             background-color:$canceled-wish-color;
         }
+
+        /* Tooltip*/
+        .summary-bar-section .summary-bar-status-tooltip {
+            display: flex;
+            flex-direction: row;
+            visibility: hidden;
+            color: black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .summary-bar-section:hover .summary-bar-status-tooltip {
+            visibility: visible;
+        }
     }
 
     .list-button-filter{
