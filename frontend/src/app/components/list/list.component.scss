@@ -9,7 +9,7 @@
     max-width: 1056px;
     height: fit-content;
     font-style: normal;
-    padding: 24px 16px;
+    padding: 24px;
     background-color: $default-white;
     border-radius: 25px;
     row-gap: 24px;
@@ -24,6 +24,7 @@
         display: flex;
         align-items: baseline;   
         .summary-container-number {
+            line-height: 80%;
             min-height: 36px;
             font-weight: 600;
             font-size: 45px;
@@ -102,9 +103,8 @@
     }    
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 796px) {
     .list-container {
        align-items: center;
-       padding: 24px 0;
-    }
+    }    
 }    

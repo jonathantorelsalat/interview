@@ -14,7 +14,7 @@ export enum StatusName {
     CANCELLED = 'Annulé / refusé / non finalisé'
 }
 
-//mettre à jour palette.scss si update
+// Mettre à jour palette.scss si update
 export enum ColorStatusName{
     APPLICATION = '#FF7F7F',
     DISCUSSION = '#FF0000',

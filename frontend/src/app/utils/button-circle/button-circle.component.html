@@ -3,6 +3,7 @@ class="button-circle"
 [ngStyle]="{'background-color': backgroundColor}"
 [attr.aria-label]="getAriaLabel()"
 [class.buttonSelected]="isSelected"
+[class.readonly]="readonly"
 (click)="updateSelection()">
     <div class="circle-div" [ngStyle]="{'background-color': circleColor}"></div>
     {{libelle}}

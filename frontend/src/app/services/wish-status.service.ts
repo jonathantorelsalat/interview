@@ -22,7 +22,7 @@ export class WishStatusService {
   return Object.keys(this.statusNameEnum).includes(status) ? this.statusNameEnum[status] : status;
  }
 
- // get le statut du statut du wish depuis l'enum
+ // get la description du statut du wish depuis l'enum
  public getStatusDescription(status: string): string{
   return Object.keys(this.statusDescriptionEnum).includes(status) ? this.statusDescriptionEnum[status] : status;
  }

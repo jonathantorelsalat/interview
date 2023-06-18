@@ -4,7 +4,7 @@
     <div class="volontaire-detail">
         <div class ="volontaire-detail-inscription">
             <div class ="volontaire-detail-inscription-item">
-                <img class="volontaire-detail-inscription-picture" src="/assets/images/image3.png" alt="location dot image">
+                <img class="volontaire-detail-inscription-picture" src="/assets/images/defaultImage.png" alt="location dot image">
             </div>
             <div class ="volontaire-detail-inscription-id volontaire-detail-inscription-item">
                 {{ wishConsultData.volontaireId }}
@@ -21,15 +21,15 @@
                 {{ wishConsultData.nomCompany }}
             </div>
             <div class="volontaire-detail-personnal-item volontaire-detail-personnal-mission">
-                <img class="volontaire-detail-personnal-localisation-icon" src="/assets/images/handPointRight.png" alt="hand point right image">
+                <img class="volontaire-detail-personnal-icon" src="/assets/images/handPointRight.svg" alt="hand point right image">
                 <div class="volontaire-detail-personnal-mission-texte">{{ wishConsultData.nomMission }}</div>
             </div>
             <div class ="volontaire-detail-personnal-localisation volontaire-detail-personnal-item">
-                <img class="volontaire-detail-personnal-localisation-icon" src="/assets/images/locationDot.jpg" alt="location dot image">
+                <img class="volontaire-detail-personnal-icon" src="/assets/images/location.svg" alt="location dot image">
                 {{ wishConsultData.localisationMission }}
             </div>
             <div class ="volontaire-detail-personnal-coordinateur volontaire-detail-personnal-item">
-                <fa-icon [icon]="solidUser"></fa-icon>
+                <img class="volontaire-detail-personnal-icon" src="/assets/images/user.svg" alt="user image">
                 {{ wishConsultData.prenomCoordinateur }} {{ wishConsultData.nomCoordinateur }} - {{ wishConsultData.nomPoste }}
             </div>
         </div>

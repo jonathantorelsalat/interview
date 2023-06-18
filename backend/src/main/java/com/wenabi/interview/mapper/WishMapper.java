@@ -45,7 +45,7 @@ public class WishMapper {
 				.nomCoordinateur(wishDetail.getNomCoordinateurMission())//
 				.nomMission(wishDetail.getNomInitiative())//
 				.nomCompany(wishDetail.getNomCompanyVolontaire())//
-				.nomPoste("nomPosteCoordinateur")//
+				.nomPoste("Coordinateur")//
 				.prenom(wishDetail.getPrenomVolontaire())//
 				.prenomCoordinateur(wishDetail.getPrenomCoordinateurMission())//
 				.wishStatus(wishDetail.getWishStatus())//

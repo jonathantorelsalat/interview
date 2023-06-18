@@ -13,11 +13,8 @@
     transition: 0.5 all ease-in-out;
     gap: 1rem;
     padding: 0.5rem;
-
-    &:hover {
-        cursor: pointer;
-    }
-
+    cursor: pointer;
+    
     .circle-div{
         border-radius:50%;
         width: 16px;
@@ -26,4 +23,7 @@
 }
 .buttonSelected{
     background-color: $button-is-selected;
+}
+.readonly{
+    cursor: default;
 }
